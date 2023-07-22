@@ -16,6 +16,16 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
+
+    - image: fahimsami/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
+
     - image: fahimsami/client
       context: client
       docker:
