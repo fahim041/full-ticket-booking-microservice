@@ -1,10 +1,10 @@
-import express, { Request, Response } from "express";
-import { currentUser } from "../middleware/current-user";
+import express, { Request, Response } from 'express';
+import { currentUser } from '@fasticket/common';
 
 const router = express.Router();
 
 router.get(
-  "/api/users/currentuser",
+  '/api/users/currentuser',
   currentUser,
   (req: Request, res: Response) => {
     res.send({ currentUser: req.currentUser || null });
